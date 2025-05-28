@@ -15,7 +15,7 @@ const Orders = () => {
 
     const getAllOrders = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/api/Orders/allOrder");
+        const response = await axios.get("https://attiro1.onrender.com/api/Orders/allOrder");
         setOrders(response.data.orders); // Store orders in state
        
       } catch (error) {
@@ -29,7 +29,7 @@ const Orders = () => {
   // Api to update  the order status 
   const updateStatus=async(_id,status)=>{
 try {
-  const {data}= await axios.post("http://localhost:4000/api/Orders/status",
+  const {data}= await axios.post("https://attiro1.onrender.com/api/Orders/status",
     {_id,
     status:status})
   if(data.success){

@@ -15,7 +15,7 @@ const verifyhandler=async()=>{
       return null
     }
 
-    const response=await axios.post("http://localhost:4000/api/orders/verify",
+    const response=await axios.post("https://attiro1.onrender.com/api/orders/verify",
 {success,orderId},   
 { headers: { Authorization: token } }
     )

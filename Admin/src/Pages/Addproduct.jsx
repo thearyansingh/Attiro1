@@ -45,7 +45,7 @@ const Addproduct = ({setToken}) => {
       if (image4) formData.append("image4", image4);
   
       const response = await axios.post(
-        "http://localhost:4000/api/product/newProduct",
+        "https://attiro1.onrender.com/api/product/newProduct",
         formData,
         {
           headers: {

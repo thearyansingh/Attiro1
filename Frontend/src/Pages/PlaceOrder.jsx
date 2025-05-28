@@ -70,7 +70,7 @@ const PlaceOrder = () => {
           if (token) {
             try {
               const response = await axios.post(
-                "http://localhost:4000/api/orders/cod",
+                "https://attiro1.onrender.com/api/orders/cod",
                 orderData,
                 { headers: { Authorization: token } }
               );
@@ -88,7 +88,7 @@ const PlaceOrder = () => {
           break;
           case"Stripe":
           console.log(token)
-         const response=await axios.post("http://localhost:4000/api/orders/Stripe",
+         const response=await axios.post("https://attiro1.onrender.com/api/orders/Stripe",
           orderData,
           { headers: { Authorization: token } }
         )

@@ -60,7 +60,7 @@ const ShopProvider = (props) => {
       if (token) {
         try {
           await axios.post(
-            "http://localhost:4000/api/cart/addCart",
+            "https://attiro1.onrender.com/api/cart/addCart",
             { itemId, size },
             { headers: { Authorization: token } } // Ensure this matches case in your middleware
           );
@@ -125,7 +125,7 @@ const ShopProvider = (props) => {
       if (token) {
         try {
           await axios.post(
-            "http://localhost:4000/api/cart/updateCart",
+            "https://attiro1.onrender.com/api/cart/updateCart",
             { itemId, size, quantity },
             { headers: { Authorization: token } } // Ensure this matches case in your middleware
           );
@@ -186,7 +186,7 @@ const ShopProvider = (props) => {
       try {
         setLoading(true);
         const response = await axios.get(
-          "http://localhost:4000/api/product/listProduct"
+          "https://attiro1.onrender.com/api/product/listProduct"
         );
         if (response?.data?.allProduct) {
           setProduct(response.data.allProduct);

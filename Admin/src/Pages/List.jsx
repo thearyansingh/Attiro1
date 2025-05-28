@@ -11,7 +11,7 @@ console.log(Token);
 const removeProduct = async (id) => {
   try {
 
-    const { data } = await axios.delete("http://localhost:4000/api/product/removeProduct", {
+    const { data } = await axios.delete("https://attiro1.onrender.com/api/product/removeProduct", {
       headers: { Authorization:Token }, 
       data: { id }, 
     });
@@ -32,7 +32,7 @@ const removeProduct = async (id) => {
    useEffect(() => {
     const getProducts = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/api/product/listProduct");
+        const response = await axios.get("https://attiro1.onrender.com/api/product/listProduct");
         console.log(response.data); // Log the API response
         setProducts(response.data.allProduct); // Assuming response contains { products: [...] }
       } catch (error) {

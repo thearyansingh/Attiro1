@@ -18,7 +18,7 @@ const [password, setpassword] = useState("")
 try {
  
   if(authone==='SignUp'){
-    const {data}=await axios.post("http://localhost:4000/api/user/register",{name,email,password})
+    const {data}=await axios.post("https://attiro1.onrender.com/api/user/register",{name,email,password})
     console.log(data);
     if(data?.success){
       setToken(data?.userToken);
@@ -33,7 +33,7 @@ try {
 
   }
   else{
-    const {data}=await axios.post("http://localhost:4000/api/user/login",{email,password})
+    const {data}=await axios.post("https://attiro1.onrender.com/api/user/login",{email,password})
     console.log(data);
     
     if(data?.success){
